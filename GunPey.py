@@ -26,13 +26,13 @@ root.resizable(False, False)
 cvs = tkinter.Canvas(root, width=146, height=226)
 cvs.pack()
 
-bg = tkinter.PhotoImage(file="gunpey_stage.png")
+bg = tkinter.PhotoImage(file="./image/GupPey_GameBoard_Stage.png")
 img_panel = [
     None,
-    tkinter.PhotoImage(file="gunpey_panel_Z.png"),
-    tkinter.PhotoImage(file="gunpey_panel_N.png"),
-    tkinter.PhotoImage(file="gunpey_panel_A.png"),
-    tkinter.PhotoImage(file="gunpey_panel_V.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_Z.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_N.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_A.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_V.png"),
 ]
 
 cvs.create_image(73, 113, image=bg)
