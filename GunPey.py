@@ -15,7 +15,7 @@ def mouse_press(e):
     global mouse_c
     mouse_c = 1
 
-gunpey = [
+normalPanel = [
     [0, 0, 0, 0, 0,],
     [0, 0, 0, 0, 0,],
     [0, 0, 0, 0, 0,],
@@ -28,11 +28,11 @@ gunpey = [
     [0, 0, 0, 0, 0,]
 ]
 
-def draw_panel():
+def draw_panel(panel):
     for y in range(10):
         for x in range(5):
-            if gunpey[y][x] > 0:
-                cvs.create_image(x*24+21, y*16+57, image=img_panel[gunpey[y][x]], tag="PANEL")
+            if panel[y][x] > 0:
+                cvs.create_image(x*24+21, y*16+57, image=img_panel[panel[y][x]], tag="PANEL")
 
 def game_main():
     global cursor_x, cursor_y, mouse_c
@@ -42,13 +42,13 @@ def game_main():
         if mouse_c == 1:
             mouse_c = 0
             tmp = 0
-            tmp = gunpey[cursor_y][cursor_x]
-            gunpey[cursor_y][cursor_x] = gunpey[cursor_y+1][cursor_x]
-            gunpey[cursor_y+1][cursor_x] = tmp
+            tmp = normalPanel[cursor_y][cursor_x]
+            normalPanel[cursor_y][cursor_x] = normalPanel[cursor_y+1][cursor_x]
+            normalPanel[cursor_y+1][cursor_x] = tmp
     cvs.delete("CURSOR")
     cvs.create_image(cursor_x*24+21, cursor_y*16+65, image=cursor, tag="CURSOR")
     cvs.delete("PANEL")
-    draw_panel()
+    draw_panel(normalPanel)
     root.after(100, game_main)
 
 root = tkinter.Tk()
