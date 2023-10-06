@@ -63,10 +63,14 @@ bg = tkinter.PhotoImage(file="./image/GupPey_GameBoard_Stage.png")
 cursor = tkinter.PhotoImage(file="./image/GupPey_GameBoard_Cursor.png")
 img_panel = [
     None,
-    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_Z.png"),
-    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_N.png"),
-    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_A.png"),
-    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_V.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_Z_0.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_Z_1.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_N_0.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_N_1.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_A_0.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_A_1.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_V_0.png"),
+    tkinter.PhotoImage(file="./image/Panels/GupPey_GameBoard_Panels_V_1.png"),
 ]
 
 cvs.create_image(73, 113, image=bg)
